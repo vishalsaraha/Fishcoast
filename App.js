@@ -36,11 +36,9 @@ export default function App() {
         keyboardType="numeric"
         maxLength={6}
       />
-      <View>
-        <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Text style={styles.buttonText}>Sign In</Text>
-    </TouchableOpacity>
-    </View>
+         <TouchableOpacity style={styles.button} onPress={onPress}>
+            <Text style={styles.buttonText}>Sign In</Text>
+          </TouchableOpacity>
       </View>
       <StatusBar style="auto"/>
     </View>
@@ -94,10 +92,9 @@ const styles = StyleSheet.create({
   },
   button: {
     justifyContent: 'center',
-    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#D9D9D9',
     padding: 8,
     borderRadius: 10,
   }
-
 });
