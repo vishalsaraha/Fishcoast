@@ -1,20 +1,103 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,
+        Text, 
+        View, 
+        TextInput, 
+        Button,  
+        Alert, 
+        TouchableOpacity,
+        SafeAreaView} from 'react-native';
 
 export default function App() {
   return (
+    <SafeAreaView style={styles.container}>
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.text}>LOGIN</Text>
+      <View style={styles.TextInput}>
+      <Text style={styles.text__in}>Enter your name</Text>
+      <TextInput
+        style={styles.inputnm}
+        maxLength={25}
+      />
+      <Text style={styles.text__in}>Enter phone number</Text>
+      <TextInput
+        style={styles.inputph}
+        keyboardType="numeric"
+        maxLength={10}
+      />
+      <Button
+       title="Get otp"
+       color="#2C2C2C"
+       onPress={() => Alert.alert('your otp 456678')} 
+      />
+       <Text style={styles.text__in}>Enter your OTP</Text>
+      <TextInput
+        style={styles.inputotp}
+        keyboardType="numeric"
+        maxLength={6}
+      />
+      <View>
+        <TouchableOpacity style={styles.button} onPress={onPress}>
+      <Text style={styles.buttonText}>Sign In</Text>
+    </TouchableOpacity>
     </View>
+      </View>
+      <StatusBar style="auto"/>
+    </View>
+    </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#2C2C2C',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text:{
+    color: '#ffff',
+    fontSize: 32,
+    fontWeight: 'bold',
+    position:'absolute',
+    top:'10%',
+  },
+  text__in:{
+    color: '#ffff',
+    fontSize: 18,
+  },
+  inputnm:{
+    backgroundColor: '#ffff',
+    height: 34,
+    width: 250,
+    margin: 12,
+    padding: 5,
+    borderRadius: 8,
+  },
+  button__otp:{
+
+  },
+  inputph:{
+   backgroundColor: '#ffff',
+   height: 34,
+   width: 250,
+   margin: 12,
+   padding: 5,
+   borderRadius: 8,
+  },
+  inputotp:{
+    backgroundColor: '#ffff',
+    height: 34,
+    width: 250,
+    margin: 12,
+    padding: 10,
+    borderRadius: 8,
+  },
+  button: {
+    justifyContent: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#D9D9D9',
+    padding: 8,
+    borderRadius: 10,
+  }
+
 });
