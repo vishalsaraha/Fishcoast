@@ -34,15 +34,12 @@ import { StyleSheet,
        color="#2C2C2C"
        onPress={() => Alert.alert('your otp 456678')} 
       />
-       <Text style={styles.text__in}>Enter your OTP</Text>
+      <Text style={styles.text__in}>Enter your OTP</Text>
       <TextInput
         style={styles.inputotp}
         keyboardType="numeric"
         maxLength={6}
       />
-         <TouchableOpacity style={styles.button} onPress={handleSignIn}>
-            <Text style={styles.buttonText}>Sign In</Text>
-          </TouchableOpacity>
       </View>
       <StatusBar style="auto"/>
     </View>
@@ -94,13 +91,4 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 8,
   },
-  button: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#D9D9D9',
-    padding: 8,
-    borderRadius: 10,
-    alignSelf: 'center',
-  },
-  
 });
