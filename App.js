@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D9D9D9',
     padding: 8,
     borderRadius: 10,
-    alignSelf: 'center', // Center the button horizontally
+    alignSelf: 'center',
   },
   
 });
