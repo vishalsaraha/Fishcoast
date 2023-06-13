@@ -8,7 +8,11 @@ import { StyleSheet,
         TouchableOpacity,
         SafeAreaView} from 'react-native';
 
-export default function App() {
+        export default function App() {
+          const handleSignIn = () => {
+            // Handle sign-in logic here
+            Alert.alert('Sign In button pressed');
+          };
   return (
     <SafeAreaView style={styles.container}>
     <View style={styles.container}>
@@ -36,7 +40,7 @@ export default function App() {
         keyboardType="numeric"
         maxLength={6}
       />
-         <TouchableOpacity style={styles.button} onPress={onPress}>
+         <TouchableOpacity style={styles.button} onPress={handleSignIn}>
             <Text style={styles.buttonText}>Sign In</Text>
           </TouchableOpacity>
       </View>
@@ -96,5 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D9D9D9',
     padding: 8,
     borderRadius: 10,
-  }
+    alignSelf: 'center', // Center the button horizontally
+  },
+  
 });
